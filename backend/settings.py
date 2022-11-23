@@ -184,5 +184,5 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #     dotenv.load_dotenv(dotenv_file)
 
 ALLOWED_HOSTS = ['*'] # Set to open for all access
-ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
+# ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
 django_heroku.settings(locals())
