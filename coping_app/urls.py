@@ -64,6 +64,7 @@ comment_detail = CommentViewSet.as_view({
 })
 
 urlpatterns = [
+    path('', user_list, name="user-list"),
     path('users/', user_list, name="user-list"),
     path('users/<int:pk>/', user_detail, name="user-detail"),
     path('internships/', internship_list, name="internship-list"),
@@ -74,6 +75,5 @@ urlpatterns = [
     path('posts/<int:pk>', post_detail, name="post-detail"),
     path('comments/', comment_list, name="comment-list"),
     path('comments/<int:pk>', comment_detail, name="comment-detail"),
-    re_path('', TemplateView.as_view(template_name='index.html')),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)
