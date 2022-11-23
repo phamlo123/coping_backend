@@ -174,7 +174,7 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000', 'http://coping-nu.netlify.app'
+    'http://localhost:3000', 'https://coping-nu.netlify.app'
 )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
