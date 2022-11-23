@@ -191,10 +191,10 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 #     dotenv.load_dotenv(dotenv_file)
 
 # ALLOWED_HOSTS = ['*'] # Set to open for all access
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000', 'https://coping-nu.netlify.app', 'https://coping-backend.herokuapp.com'
-]
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000', 'https://coping-nu.netlify.app', 'https://coping-backend.herokuapp.com'
+# ]
 
 ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
 django_heroku.settings(locals())
