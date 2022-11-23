@@ -172,7 +172,14 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+CORS_ALLOW_HEADERS = (
+        'x-requested-with',
+        'content-type',
+        'accept',
+        'origin',
+        'authorization',
+        'x-csrftoken'
+)
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000', 'https://coping-nu.netlify.app'
 )
@@ -183,8 +190,8 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 # if os.path.isfile(dotenv_file):
 #     dotenv.load_dotenv(dotenv_file)
 
-ALLOWED_HOSTS = ['*'] # Set to open for all access
+# ALLOWED_HOSTS = ['*'] # Set to open for all access
 CORS_ORIGIN_ALLOW_ALL = True
 
-# ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
+ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
 django_heroku.settings(locals())
