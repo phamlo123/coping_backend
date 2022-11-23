@@ -180,9 +180,9 @@ CORS_ALLOW_HEADERS = (
         'authorization',
         'x-csrftoken'
 )
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:3000', 'https://coping-nu.netlify.app'
-)
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:3000', 'https://coping-nu.netlify.app'
+# )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -192,6 +192,9 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ALLOWED_HOSTS = ['*'] # Set to open for all access
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000', 'https://coping-nu.netlify.app', 'https://coping-backend.herokuapp.com'
+]
 
 ALLOWED_HOSTS = ['coping.herokuapp.com', '127.0.0.1:8000', 'localhost', 'coping-nu.netlify.app']
 django_heroku.settings(locals())
